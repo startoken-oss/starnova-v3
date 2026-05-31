@@ -1,117 +1,57 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+     content="width=device-width, initial-scale=1.0">
 
   <title>STARNOVA</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+        href="style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
 
-  <canvas id="starfield"></canvas>
+<canvas id="starfield"></canvas>
 
   <div class="source-light"></div>
 
   <section class="gateway">
 
-    <img src="aleph.png"
-         class="aleph"
-         alt="Aleph">
+```
+<img src="aleph.png"
+     class="aleph"
+     alt="Aleph">
 
-  
-    <h1>STARNOVA</h1>
+<h1>STARNOVA</h1>
 
-    <p class="tagline">
-      The Constellation Map of the Heart
-    </p>
-    
-<section class="constellation hidden">
+<p class="tagline">
+  The Constellation Map of the Heart
+</p>
 
-  <div class="node aleigha">
-    ALEIGHA
-  </div>
+<button id="enterBtn">
+  ENTER THE CONSTELLATION
+</button>
 
-  <div class="node music">
-    THE MUSIC
-  </div>
-
-  <div class="node travelers">
-    FELLOW TRAVELERS
-  </div>
-
-  <div class="node stewardship">
-    STEWARDSHIP
-  </div>
-
-</section> 
-    
-    <button id="enterBtn">
-      ENTER THE CONSTELLATION
-    </button>
-
-    <p class="verse">
-      Where your treasure is,
-      there your heart will be also.
-    </p>
-
-  </section>
-
-  <section class="constellation hidden">
-
-    <div class="node music">
-      THE MUSIC
-    </div>
-
-    <div class="node travelers">
-      FELLOW TRAVELERS
-    </div>
-
-    <div class="node stewardship">
-      STEWARDSHIP
-    </div>
+<p class="verse">
+  Where your treasure is,
+  there your heart will be also.
+</p>
+```
 
   </section>
 
   <script src="stars.js"></script>
-<script>
 
-const enterBtn =
-document.getElementById(
-  "enterBtn"
-);
-
-const gateway =
-document.querySelector(
-  ".gateway"
-);
-
-const constellation =
-document.querySelector(
-  ".constellation"
-);
-
-enterBtn.addEventListener(
-  "click",
-  () => {
-
-    constellation.classList.remove(
-      "hidden"
-    );
-
-  }
-);
-
-  }
-);
-
-</script>
 </body>
+
 </html>
