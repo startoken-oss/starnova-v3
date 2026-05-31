@@ -32,7 +32,27 @@
     <p class="tagline">
       The Constellation Map of the Heart
     </p>
+    
+<section class="constellation hidden">
 
+  <div class="node aleigha">
+    ALEIGHA
+  </div>
+
+  <div class="node music">
+    THE MUSIC
+  </div>
+
+  <div class="node travelers">
+    FELLOW TRAVELERS
+  </div>
+
+  <div class="node stewardship">
+    STEWARDSHIP
+  </div>
+
+</section> 
+    
     <button id="enterBtn">
       ENTER THE CONSTELLATION
     </button>
@@ -61,6 +81,42 @@
   </section>
 
   <script src="stars.js"></script>
+<script>
 
+const enterBtn =
+document.getElementById(
+  "enterBtn"
+);
+
+const gateway =
+document.querySelector(
+  ".gateway"
+);
+
+const constellation =
+document.querySelector(
+  ".constellation"
+);
+
+enterBtn.addEventListener(
+  "click",
+  () => {
+
+    gateway.style.opacity = "0";
+
+    setTimeout(() => {
+
+      gateway.style.display =
+        "none";
+
+      constellation.classList
+        .remove("hidden");
+
+    }, 1200);
+
+  }
+);
+
+</script>
 </body>
 </html>
