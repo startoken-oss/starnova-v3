@@ -27,13 +27,13 @@ body {
 
   position: fixed;
 
-  top: -400px;
+  top: -550px;
   left: 50%;
 
   transform: translateX(-50%);
 
-  width: 1200px;
-  height: 1200px;
+  width: 1600px;
+  height: 1600px;
 
   border-radius: 50%;
 
@@ -73,7 +73,7 @@ body {
 
 .aleph {
 
-  width: 260px;
+  width: 340px;
 
   margin-bottom: 25px;
 
@@ -89,9 +89,8 @@ body {
 
 h1 {
 
-  font-size: 70px;
-
-  letter-spacing: 8px;
+  font-size: 42px;
+  letter-spacing: 6px;
 
   margin-bottom: 10px;
 }
@@ -100,11 +99,12 @@ h1 {
 
 h2 {
 
-  font-size: 40px;
+  font-size: 58px;
+
+  letter-spacing: 4px;
 
   color: #8fd8ff;
 
-  margin-bottom: 20px;
 }
 
 /* TAGLINE */
