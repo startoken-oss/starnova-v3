@@ -310,3 +310,113 @@ h2 {
   }
 
 }
+/* CONSTELLATION */
+
+.constellation {
+
+  position: fixed;
+
+  inset: 0;
+
+  animation:
+    fadeIn 2s ease;
+
+}
+
+.node {
+
+  position: absolute;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  text-align: center;
+
+  backdrop-filter:
+    blur(6px);
+
+  box-shadow:
+    0 0 40px rgba(
+      114,
+      214,
+      255,
+      .25
+    );
+
+}
+
+/* ALEIGHA */
+
+.aleigha {
+
+  width: 180px;
+  height: 180px;
+
+  top: 18%;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+}
+
+/* MUSIC */
+
+.music {
+
+  width: 220px;
+  height: 220px;
+
+  left: 15%;
+  top: 40%;
+
+}
+
+/* TRAVELERS */
+
+.travelers {
+
+  width: 220px;
+  height: 220px;
+
+  right: 15%;
+  top: 40%;
+
+}
+
+/* STEWARDSHIP */
+
+.stewardship {
+
+  width: 180px;
+  height: 180px;
+
+  left: 50%;
+  bottom: 12%;
+
+  transform:
+    translateX(-50%);
+
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+  }
+
+  to {
+
+    opacity: 1;
+
+  }
+
+}
