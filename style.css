@@ -1,420 +1,217 @@
-/* =========================
-   RESET
-========================= */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* =========================
-   BODY
-========================= */
+  }
 
 body {
 
-  background:
-    radial-gradient(
-      circle at top center,
-      rgba(255,245,220,.05),
-      transparent 40%
-    ),
-    #010611;
+background:
+radial-gradient(
+circle at top center,
+rgba(255,245,220,.04),
+transparent 40%
+),
+#010611;
 
-  color: white;
+color: white;
 
-  font-family: 'Orbitron', sans-serif;
+font-family: 'Orbitron', sans-serif;
 
-  overflow: hidden;
-
+overflow: hidden;
 }
-
-/* =========================
-   STARFIELD
-========================= */
 
 #starfield {
 
-  position: fixed;
+position: fixed;
 
-  inset: 0;
+inset: 0;
 
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
 
-  z-index: -20;
-
+z-index: -20;
 }
 
-/* =========================
-   SOURCE LIGHT
-========================= */
+/* SOURCE */
 
 .source-light {
 
-  position: fixed;
+position: fixed;
 
-  inset: 0;
+inset: 0;
 
-  pointer-events: none;
+pointer-events: none;
 
-  z-index: -1;
-
+z-index: -1;
 }
-
-/* CENTER COLUMN */
 
 .source-light::before {
 
-  content: "";
+content: "";
 
-  position: absolute;
+position: absolute;
 
-  left: 50%;
-  top: 0;
+left: 50%;
+top: 0;
 
-  transform: translateX(-50%);
+transform: translateX(-50%);
 
-  width: 260px;
-  height: 750px;
+width: 260px;
+height: 700px;
 
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(255,245,220,.22),
-      rgba(255,245,220,.08),
-      transparent
-    );
+background:
+linear-gradient(
+to bottom,
+rgba(255,245,220,.20),
+rgba(255,245,220,.08),
+transparent
+);
 
-  filter: blur(60px);
-
+filter: blur(60px);
 }
-
-/* OUTER CONVERGENCE */
 
 .source-light::after {
 
-  content: "";
+content: "";
 
-  position: absolute;
+position: absolute;
 
-  left: 50%;
-  top: 0;
+left: 50%;
+top: 0;
 
-  transform: translateX(-50%);
+transform: translateX(-50%);
 
-  width: 1800px;
-  height: 900px;
+width: 1600px;
+height: 800px;
 
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(255,245,220,.14),
-      transparent
-    );
+background:
+linear-gradient(
+to bottom,
+rgba(255,245,220,.10),
+transparent
+);
 
-  clip-path: polygon(
-    49% 0%,
-    51% 0%,
-    100% 100%,
-    0% 100%
-  );
+clip-path: polygon(
+49% 0%,
+51% 0%,
+100% 100%,
+0% 100%
+);
 
-  filter: blur(100px);
-
+filter: blur(100px);
 }
 
-/* =========================
-   GATEWAY
-========================= */
+/* GATEWAY */
 
 .gateway {
 
-  position: relative;
+min-height: 100vh;
 
-  z-index: 10;
+display: flex;
 
-  min-height: 100vh;
+flex-direction: column;
 
-  display: flex;
+justify-content: center;
 
-  flex-direction: column;
+align-items: center;
 
-  justify-content: center;
+text-align: center;
 
-  align-items: center;
-
-  text-align: center;
-
-  padding: 40px;
-
+padding: 40px;
 }
-
-/* =========================
-   ALEPH
-========================= */
 
 .aleph {
 
-  width: 380px;
+width: 380px;
 
-  max-width: 80vw;
+max-width: 80vw;
 
-  margin-bottom: 25px;
+margin-bottom: 20px;
 
-  animation: float 8s ease-in-out infinite;
+animation: float 8s ease-in-out infinite;
 
-  filter:
-    drop-shadow(0 0 20px #72d6ff)
-    drop-shadow(0 0 50px #8d5cff)
-    drop-shadow(0 0 90px rgba(114,214,255,.35));
-
+filter:
+drop-shadow(0 0 20px #72d6ff)
+drop-shadow(0 0 50px #8d5cff);
 }
-
-/* =========================
-   ALEIGHA
-========================= */
 
 h1 {
 
-  font-size: 34px;
+font-size: 72px;
 
-  letter-spacing: 6px;
+letter-spacing: 4px;
 
-  margin-bottom: 10px;
+color: #9fd8ff;
 
-  color: rgba(255,255,255,.9);
-
+margin-bottom: 18px;
 }
-
-/* =========================
-   STARNOVA
-========================= */
-
-h2 {
-
-  font-size: 76px;
-
-  letter-spacing: 4px;
-
-  color: #9fd8ff;
-
-  margin-bottom: 20px;
-
-  text-shadow:
-    0 0 15px rgba(114,214,255,.3);
-
-}
-
-/* =========================
-   TAGLINE
-========================= */
 
 .tagline {
 
-  font-size: 26px;
+font-size: 28px;
 
-  max-width: 900px;
+max-width: 900px;
 
-  margin-bottom: 35px;
-
-  opacity: .95;
-
+margin-bottom: 40px;
 }
-
-/* =========================
-   BUTTON
-========================= */
 
 #enterBtn {
 
-  padding: 18px 45px;
+padding: 18px 45px;
 
-  border: none;
+border: none;
 
-  border-radius: 60px;
+border-radius: 60px;
 
-  cursor: pointer;
+cursor: pointer;
 
-  font-size: 16px;
+color: white;
 
-  font-weight: 700;
+font-weight: bold;
 
-  color: white;
+background:
+linear-gradient(
+90deg,
+#72d6ff,
+#8d5cff
+);
 
-  background:
-    linear-gradient(
-      90deg,
-      #72d6ff,
-      #8d5cff
-    );
+box-shadow:
+0 0 25px rgba(114,214,255,.35);
 
-  box-shadow:
-    0 0 25px rgba(114,214,255,.35);
-
-  transition: .3s;
-
+transition: .3s;
 }
 
 #enterBtn:hover {
 
-  transform: translateY(-3px);
-
+transform: translateY(-3px);
 }
-
-/* =========================
-   VERSE
-========================= */
 
 .verse {
 
-  margin-top: 30px;
+margin-top: 30px;
 
-  font-size: 18px;
+font-size: 18px;
 
-  line-height: 1.8;
+line-height: 1.8;
 
-  max-width: 700px;
+max-width: 700px;
 
-  opacity: .85;
-
+opacity: .85;
 }
-
-/* =========================
-   CONSTELLATION
-========================= */
-
-.hidden {
-  display:block;
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
 
 @keyframes float {
 
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-
-}
-/* CONSTELLATION */
-
-.constellation {
-
-  position: fixed;
-
-  inset: 0;
-
-  animation:
-    fadeIn 2s ease;
-
+0% {
+transform: translateY(0px);
 }
 
-.node {
-
-  position: absolute;
-
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 50%;
-
-  color: white;
-
-  text-align: center;
-
-  backdrop-filter:
-    blur(6px);
-
-  box-shadow:
-    0 0 40px rgba(
-      114,
-      214,
-      255,
-      .25
-    );
-
+50% {
+transform: translateY(-15px);
 }
 
-/* ALEIGHA */
-
-.aleigha {
-
-  width: 180px;
-  height: 180px;
-
-  top: 18%;
-  left: 50%;
-
-  transform:
-    translateX(-50%);
-
+100% {
+transform: translateY(0px);
 }
-
-/* MUSIC */
-
-.music {
-
-  width: 220px;
-  height: 220px;
-
-  left: 15%;
-  top: 40%;
-
-}
-
-/* TRAVELERS */
-
-.travelers {
-
-  width: 220px;
-  height: 220px;
-
-  right: 15%;
-  top: 40%;
-
-}
-
-/* STEWARDSHIP */
-
-.stewardship {
-
-  width: 180px;
-  height: 180px;
-
-  left: 50%;
-  bottom: 12%;
-
-  transform:
-    translateX(-50%);
-
-}
-
-@keyframes fadeIn {
-
-  from {
-
-    opacity: 0;
-
-  }
-
-  to {
-
-    opacity: 1;
-
-  }
-
 }
