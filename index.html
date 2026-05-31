@@ -102,17 +102,12 @@ enterBtn.addEventListener(
   "click",
   () => {
 
-    gateway.style.opacity = "0";
+    constellation.classList.remove(
+      "hidden"
+    );
 
-    setTimeout(() => {
-
-      gateway.style.display =
-        "none";
-
-      constellation.classList
-        .remove("hidden");
-
-    }, 1200);
+  }
+);
 
   }
 );
