@@ -11,6 +11,17 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
         rel="stylesheet">
+  
+  <style>
+    .gateway {
+      position: relative !important;
+      z-index: 9999 !important;
+    }
+    #enterBtn {
+      cursor: pointer !important;
+      pointer-events: auto !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -34,7 +45,7 @@
     </p>
 
     <a href="https://etherscan.io/token/0x15761A8A54B237A23f36a4AB5Ed23ecba5F7259A" target="_blank" rel="noopener noreferrer">
-      <button id="enterBtn">
+      <button id="enterBtn" onclick="window.open('https://etherscan.io/token/0x15761A8A54B237A23f36a4AB5Ed23ecba5F7259A', '_blank');">
         ENTER THE CONSTELLATION
       </button>
     </a>
