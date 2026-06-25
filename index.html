@@ -11,36 +11,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
         rel="stylesheet">
-  
-  <style>
-    /* 1. Force the container to sit in front of the background canvas */
-    .gateway {
-      position: relative !important;
-      z-index: 9999 !important;
-      pointer-events: auto !important;
-    }
-
-    /* 2. Style the link directly so it looks and acts like a sleek button */
-    .etherscan-btn {
-      display: inline-block !important;
-      padding: 18px 40px;
-      border-radius: 50px;
-      font-size: 16px;
-      font-weight: bold;
-      font-family: 'Orbitron', sans-serif;
-      text-decoration: none !important;
-      color: white !important;
-      background: linear-gradient(45deg, #7be3ff, #8d5cff);
-      box-shadow: 0 0 40px rgba(114,214,255,0.5);
-      transition: transform 0.3s ease;
-      cursor: pointer !important;
-      pointer-events: auto !important;
-    }
-
-    .etherscan-btn:hover {
-      transform: scale(1.08);
-    }
-  </style>
 </head>
 
 <body>
@@ -49,7 +19,7 @@
 
   <div class="source-light"></div>
 
-  <section class="gateway">
+  <div class="gateway">
 
     <img src="aleph.png"
          class="aleph"
@@ -75,15 +45,7 @@
       there your heart will be also.
     </p>
 
-  </section>
-
-  <section class="constellation hidden">
-
-    <div class="node music">
-      THE MUSIC
-    </div>
-
-  </section>
+  </div>
 
   <script src="stars.js"></script>
 
