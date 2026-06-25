@@ -17,9 +17,15 @@
       position: relative !important;
       z-index: 9999 !important;
     }
+    .etherscan-link {
+      display: inline-block;
+      position: relative;
+      z-index: 10000 !important;
+      cursor: pointer;
+    }
     #enterBtn {
       cursor: pointer !important;
-      pointer-events: auto !important;
+      pointer-events: none; /* Let the link handle the mouse click entirely */
     }
   </style>
 </head>
@@ -44,8 +50,11 @@
       The Constellation Map of STAR ERC TOKEN
     </p>
 
-    <a href="https://etherscan.io/token/0x15761A8A54B237A23f36a4AB5Ed23ecba5F7259A" target="_blank" rel="noopener noreferrer">
-      <button id="enterBtn" onclick="window.open('https://etherscan.io/token/0x15761A8A54B237A23f36a4AB5Ed23ecba5F7259A', '_blank');">
+    <a href="https://etherscan.io/token/0x15761A8A54B237A23f36a4AB5Ed23ecba5F7259A" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="etherscan-link">
+      <button id="enterBtn">
         ENTER THE CONSTELLATION
       </button>
     </a>
