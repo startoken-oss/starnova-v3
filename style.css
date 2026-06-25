@@ -214,3 +214,22 @@ h2{
     opacity:.5;
   }
 }
+#starfield,
+.source-light {
+  pointer-events: none !important;
+}
+
+.gateway,
+.etherscan-btn {
+  pointer-events: auto !important;
+}
+
+.gateway {
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+.etherscan-btn {
+  position: relative !important;
+  z-index: 9999 !important;
+}
