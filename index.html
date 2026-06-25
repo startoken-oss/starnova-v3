@@ -13,19 +13,32 @@
         rel="stylesheet">
   
   <style>
+    /* 1. Force the container to sit in front of the background canvas */
     .gateway {
       position: relative !important;
       z-index: 9999 !important;
+      pointer-events: auto !important;
     }
-    .etherscan-link {
-      display: inline-block;
-      position: relative;
-      z-index: 10000 !important;
-      cursor: pointer;
-    }
-    #enterBtn {
+
+    /* 2. Style the link directly so it looks and acts like a sleek button */
+    .etherscan-btn {
+      display: inline-block !important;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none !important;
+      color: white !important;
+      background: linear-gradient(45deg, #7be3ff, #8d5cff);
+      box-shadow: 0 0 40px rgba(114,214,255,0.5);
+      transition: transform 0.3s ease;
       cursor: pointer !important;
-      pointer-events: none; /* Let the link handle the mouse click entirely */
+      pointer-events: auto !important;
+    }
+
+    .etherscan-btn:hover {
+      transform: scale(1.08);
     }
   </style>
 </head>
@@ -53,10 +66,8 @@
     <a href="https://etherscan.io/token/0x15761A8A54B237A23f36a4AB5Ed23ecba5F7259A" 
        target="_blank" 
        rel="noopener noreferrer" 
-       class="etherscan-link">
-      <button id="enterBtn">
-        ENTER THE CONSTELLATION
-      </button>
+       class="etherscan-btn">
+      ENTER THE CONSTELLATION
     </a>
 
     <p class="verse">
