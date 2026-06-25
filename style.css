@@ -10,6 +10,7 @@ body {
   font-family: 'Orbitron', sans-serif;
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 /* STARFIELD */
@@ -19,8 +20,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-  /* This prevents the canvas from stealing your mouse clicks */
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 /* SOURCE LIGHT */
@@ -41,7 +41,7 @@ body {
   filter: blur(120px);
   animation: pulse 12s ease-in-out infinite;
   z-index: 2;
-  pointer-events: none; /* Prevents this layer from blocking clicks */
+  pointer-events: none;
 }
 
 /* LANDING GATEWAY */
@@ -53,10 +53,8 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
-  /* Puts your text and button in front of the background canvas */
-  z-index: 10; 
-  /* Forces the browser to listen to mouse events here */
-  pointer-events: auto !important; 
+  z-index: 10;
+  pointer-events: auto;
 }
 
 /* ALEPH IMAGE */
@@ -87,7 +85,7 @@ h2 {
   margin-bottom: 40px;
 }
 
-/* THE NEW DIRECT ETHERSCAN BUTTON */
+/* ETHERSCAN BUTTON */
 .etherscan-btn {
   display: inline-block;
   padding: 18px 40px;
@@ -99,10 +97,10 @@ h2 {
   background: linear-gradient(45deg, #7be3ff, #8d5cff);
   box-shadow: 0 0 40px rgba(114,214,255,0.5);
   transition: transform 0.3s ease;
-  cursor: pointer !important;
+  cursor: pointer;
   position: relative;
-  z-index: 20;
-  pointer-events: auto !important;
+  z-index: 100;
+  pointer-events: auto;
 }
 
 .etherscan-btn:hover {
@@ -128,45 +126,4 @@ h2 {
   0% { opacity: 0.4; }
   50% { opacity: 0.8; }
   100% { opacity: 0.4; }
-}
-#starfield {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.source-light {
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.gateway {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-}
-
-.etherscan-btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 16px 40px;
-    background: rgba(255,255,255,.08);
-    border: 2px solid #6fdcff;
-    border-radius: 40px;
-    color: white;
-    text-decoration: none;
-    font-family: Orbitron, sans-serif;
-    transition: .3s;
-    position: relative;
-    z-index: 100;
-    pointer-events: auto;
-}
-
-.etherscan-btn:hover {
-    background: #6fdcff;
-    color: #000;
-    box-shadow: 0 0 25px #6fdcff;
 }
